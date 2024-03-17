@@ -21,12 +21,18 @@ public class Box<T extends Fruit>  {
         return boxType;
     }
 
+    public void check (Object fruit){
+        if (fruit instanceof Apple) System.out.println("Яблочный фрукт");
+        else System.out.println("Апельсиновый фрукт");
+        }
+
     public void addfruit (T fruit) {
+        //check(fruit);
         if (this.fruits.size() == 0) {
-            if (fruit.getWeight() == 1f) boxType = "с яблоками";
+            if (fruit instanceof Apple) boxType = "с яблоками";
             else boxType = "с апельсинами";
         }
-        if( this.fruits.size() == 0 || fruit.getWeight() == fruits.get(0).getWeight()){
+        if( this.fruits.size() == 0 || fruit instanceof Apple == fruits.get(0) instanceof Apple){
             this.fruits.add(fruit);
         }
         else; //System.out.println("Фрукты не совпадают, нельзя положить в коробку");
