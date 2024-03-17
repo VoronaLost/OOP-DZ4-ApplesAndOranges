@@ -6,10 +6,6 @@ public class Box<T extends Fruit>  {
     private String boxType;
 
 
-    // public int compareTo(Box o) {
-    //     int surNameRes = this.surName.compareTo(o.surName);
-    //     return surNameRes == 0 ? this.name.compareTo(o.name) : surNameRes;
-    //  }
 
 
     public Box() {
@@ -21,11 +17,6 @@ public class Box<T extends Fruit>  {
         return boxType;
     }
 
-    public void check (Object fruit){
-        if (fruit instanceof Apple) System.out.println("Яблочный фрукт");
-        else System.out.println("Апельсиновый фрукт");
-        }
-
     public void addfruit (T fruit) {
         //check(fruit);
         if (this.fruits.size() == 0) {
@@ -35,7 +26,7 @@ public class Box<T extends Fruit>  {
         if( this.fruits.size() == 0 || fruit instanceof Apple == fruits.get(0) instanceof Apple){
             this.fruits.add(fruit);
         }
-        else; //System.out.println("Фрукты не совпадают, нельзя положить в коробку");
+        else; 
     }
 
     public String toString(){
